@@ -1,0 +1,17 @@
+
+    <input  placeholder="search here" class="search_container"  [formControl]="searchValve">
+
+
+        <div class="container" *ngFor="let valve of valveList"  (click)="getValveDetail(valve)">
+            <div class="img-container">
+                <img src="../../assets/valve.jpg"  class="img_size" />
+            </div>
+            <div class="nested">
+                <p> <span class="label-color">S/N: </span> <span class="content-color">{{valve.serinalNo}}</span></p>
+                <p> <span class="label-color">Type: </span> <span class="content-color">{{valve.type}}</span></p>
+                <p> <span class="label-color">Location: </span> <span class="content-color">{{valve.location}}</span></p>
+                <p> <span class="label-color">Status: </span> <span class="content-color">{{valve.status}}</span></p>
+            </div>
+        </div>
+    
+    

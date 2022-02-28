@@ -1,0 +1,40 @@
+
+ 
+<div class="container">
+    <div class="img-container">
+        <img src="../../assets/valve.jpg"  class="img_size" />
+    </div>
+    <div class="nested">
+        <p> <span class="label-color">S/N: </span> <span class="content-color">{{valve?.serinalNo}}</span></p>
+        <p> <span class="label-color">Type: </span> <span class="content-color">{{valve?.type}}</span></p>
+        <p> <span class="label-color">Location: </span> <span class="content-color">{{valve?.location}}</span></p>
+        <p> <span class="label-color">Status: </span> <span class="content-color">{{valve?.status}}</span></p>
+    </div>
+</div>
+
+<mat-tab-group animationDuration="0ms">
+    <mat-tab label="Info">
+    <h2 class="header_text content-color">Integrated electronics</h2>
+    <div class="flex-container">
+        <div>
+            <div class="info-block"> 25.2C</div>
+            <span class="inline_block">Temperature</span>
+    
+        </div>
+        <div>
+            <div class="info-block">03 h 47 min</div>
+            <span class="inline_block">Operating hours</span>
+        </div>
+    </div>
+    <h2 class="header_text content-color">Operational Characterstics</h2>
+    <div class="integartion_block">
+        <p *ngFor="let characterstic of characterStics">
+            <span class="label-color">{{characterstic.text}}</span>
+            <span class="content-color"> {{characterstic.value}}</span>
+        </p>
+    </div>
+    <h2 class="header_text content-color">Charts</h2>
+    </mat-tab>
+    <mat-tab label="Configure">Content 2</mat-tab>
+    <mat-tab label="Reports">Content 3</mat-tab>
+  </mat-tab-group>
